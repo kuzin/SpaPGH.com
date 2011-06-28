@@ -1,0 +1,178 @@
+/* MikeKuzin.com Initial Development
+   Version 2.0 Beta
+---------------------------------------- */
+
+/*
+  ✰ HTML5 / SASSY CSS3 / PHP / jQuery = Yummy ✰
+*/
+
+@import 'modules/mixins';
+@import 'modules/reset';
+
+/*
+    Global Rules .class format
+*/
+
+* {
+    margin: 0 auto;
+}
+
+* html,
+* html body {
+    width: 100%;
+    height: 100%;
+    font-size: 12px;
+}
+
+.clearfix { zoom: 1; clear: both }
+.clearfix:before,
+.clearfix:after {
+    content: "\0020";
+    display: block;
+    height: 0;
+    overflow: hidden;
+}
+
+.hidden { display:none;visibility:hidden }
+.ir { display:block;text-indent:-999em;overflow:hidden;
+      background-repeat:no-repeat;text-align:left;direction:ltr }
+
+
+
+
+/* Layout && Globals
+---------------------------------------- */
+body {
+    background: #333;
+}
+
+header#main {
+    width: 800px;
+    margin: 0 auto;
+}
+
+section {
+    width: 800px;
+}
+
+footer {
+    width: 800px;
+    margin: 0 auto;
+}
+
+hr {
+    background: url(img/hr.png) repeat-x;
+    height: 8px;
+    border: none !important;
+}
+
+
+/* Header
+---------------------------------------- */
+header#main {
+    @include clearfix;
+    margin-bottom: 30px;
+    nav {
+        ul {
+            float: right;
+            li {
+                display: inline-block;
+                padding: 100px 10px 10px 10px;
+                margin: 0 0 0 10px;
+                min-width: 51px;
+                text-align: center;
+                cursor: pointer;
+                &.selected {
+                    background: red; }
+                &:hover {
+                    background: white; } } } } }
+
+/* Section Rules
+---------------------------------------- */
+section {
+    @include clearfix;
+    margin: 0 auto 30px;
+    div.content {
+        background: white;
+        padding: 30px 60px;
+    }
+    header {
+        position: relative;
+        &:before {
+            position: absolute;
+            left: -100px;
+            top: 0;
+            content: 'left banner';
+        }
+        &:after {
+            position: absolute;
+            right: -100px;
+            top: 0;
+            content: 'right banner';
+        }
+        background: #5d8ea2 url(img/header-bg.png) repeat-x;
+        height: 51px;
+        h1 {
+        }
+        h2 {
+        }
+    }
+}
+
+/* Footer Rules
+---------------------------------------- */
+footer {
+    #footer-left {
+        width: 250px;
+        background: white;
+        float: left;
+        margin-right: 30px;
+        #footer-left-container {
+            padding: 20px;
+        }
+    }
+    #footer-right {
+        float: left;
+        width: 520px;
+        #footer-right-container {
+            background: white;
+            padding: 20px;
+        }
+        #footer-right-footer {
+            background: transparent;
+        }
+    }
+}
+
+
+
+
+/*
+    Media Queries
+*/
+
+@media all and (orientation:portrait) {}
+@media all and (orientation:landscape) {}
+@media screen and (max-device-width: 480px) {
+    // html { -webkit-text-size-adjust: none; -ms-text-size-adjust: none; }
+}
+
+/*
+    Inline Print
+*/
+
+@media print {
+    *{background:transparent !important;color:black
+        !important;text-shadow:none !important;filter:none
+        !important;-ms-filter:none !important;}
+    a,a:visited{color:#444 !important;text-decoration:underline !important;}
+    a[href]:after{content:" (" attr(href) ")";}
+    abbr[title]:after{content:" (" attr(title) ")";}
+    .ir a:after,a[href^="javascript:"]:after,a[href^="#"]:after{content:"";}
+    pre,blockquote{border:1px solid #999;page-break-inside:avoid;}
+    thead{display:table-header-group;}
+    tr,img{page-break-inside:avoid;}
+    @page{margin:0.5cm;}
+    p,h2,h3{orphans:3;widows:3;}
+    h2,h3{page-break-after:avoid;}
+}
