@@ -13,58 +13,82 @@
     Global Rules .class format
 */
 
-* {
-    margin: 0 auto;
-}
-
+* { margin: 0 auto; }
 * html,
 * html body {
     width: 100%;
     height: 100%;
-    font-size: 12px;
-}
-
+    font-size: 12px; }
 .clearfix { zoom: 1; clear: both }
 .clearfix:before,
 .clearfix:after {
     content: "\0020";
     display: block;
     height: 0;
-    overflow: hidden;
-}
-
+    overflow: hidden; }
 .hidden { display:none;visibility:hidden }
 .ir { display:block;text-indent:-999em;overflow:hidden;
       background-repeat:no-repeat;text-align:left;direction:ltr }
 
 
-
+/* Colors
+---------------------------------------- */
+$primary : #5d8ea2;
+$secondary : #333c3f;
 
 /* Layout && Globals
 ---------------------------------------- */
-body {
-    background: #333;
-}
-
+body { background: #333 url(img/bg.png) repeat; }
 header#main {
     width: 800px;
-    margin: 0 auto;
-}
-
-section {
-    width: 800px;
-}
-
+    margin: 0 auto; }
+section { width: 800px; }
 footer {
     width: 800px;
-    margin: 0 auto;
-}
-
+    margin: 0 auto; }
 hr {
     background: url(img/hr.png) repeat-x;
     height: 8px;
-    border: none !important;
-}
+    border: none !important; }
+.clearfix { clear:both; }
+
+/* Buttons
+---------------------------------------- */
+
+a#logo {
+    background: url(img/logo_colors.png) no-repeat;
+    width: 449px;
+    height: 332px;
+    display: block;
+    position: absolute;
+    top: -70px;
+    margin-left: -90px; }
+a.button {
+    display: block;
+    height: 33px;
+    font: normal bold 14px/30px 'Arial';
+    position: relative;
+    margin-left: 19px;
+    margin-right: 19px;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    @include letterpress($primary, 0, -1px);
+    background: url(img/button-sprite.png) bottom center repeat-x;
+    &:before {
+        content: url(img/button-sprite.png) top center no-repeat;
+        height: 33px;
+        width: 19px;
+        overflow: hidden;
+        position: absolute;
+        left: -19px; }
+    &:after {
+        content:  url(img/button-right.png);
+        height: 33px;
+        width: 19px;
+        overflow: hidden;
+        position: absolute;
+        right: -19px; } }
 
 
 /* Header
@@ -73,51 +97,101 @@ header#main {
     @include clearfix;
     margin-bottom: 30px;
     nav {
-        ul {
-            float: right;
+        ul { float: right;
             li {
                 display: inline-block;
-                padding: 100px 10px 10px 10px;
-                margin: 0 0 0 10px;
-                min-width: 51px;
-                text-align: center;
-                cursor: pointer;
                 &.selected {
-                    background: red; }
+                    a {
+                        background: url(img/nav-bg.png) repeat;
+                        color: $primary;
+                        @include letterpress(#FFF);
+                    } }
                 &:hover {
-                    background: white; } } } } }
+                    a {
+                    top: 0px;
+                    &#home { background: rgba(0,0,0,0.2) url(img/home-icon.png) center 110px no-repeat; }
+                    &#about { background: rgba(0,0,0,0.2) url(img/info-icon.png) center 110px no-repeat; }
+                    &#contact { background: rgba(0,0,0,0.2) url(img/contact-icon.png) center 110px no-repeat; }
+                    &#services { background: rgba(0,0,0,0.2) url(img/services-icon.png) center 110px no-repeat; }
+                    text-indent: -9999px;
+                    color: $primary;
+                    @include shadow(inset 0 0 5px #333);
+                    @include letterpress(rgba(0,0,0,0.5));} }
+                a {
+                    text-decoration: none !important;
+                    display: block;
+                    padding: 120px 15px 10px 15px;
+                    margin: 0 0 0 15px;
+                    min-width: 51px;
+                    text-align: center;
+                    cursor: pointer;
+                    font: normal normal 18px 'Dancing Script';
+                    color: #ccc;
+                    position: relative;
+                    top: -10px;
+                    @include letterpress(#333, 0, -1px);
+                    @include allround(0 0 5px 5px);
+                    -webkit-transition: top;
+                    -webkit-transition-timing-function: ease-in;
+                    -webkit-transition-duration: 250ms; } } } } }
 
 /* Section Rules
 ---------------------------------------- */
 section {
     @include clearfix;
-    margin: 0 auto 30px;
+    margin: 0 auto 25px;
+    position: relative;
+    div.content-left,
     div.content {
+        z-index: 10;
         background: white;
         padding: 30px 60px;
-    }
-    header {
-        position: relative;
+        h2 {
+            font: normal italic 27px/27px 'Dancing Script';
+            margin-bottom: 15px;
+            color: $primary; }
+        p {
+            color: $secondary;
+            strong {
+                color: $primary !important; }
+            line-height: 20px;
+            font-size: 12px;
+            margin-bottom: 10px;
+            a {
+                color: $primary !important;
+                text-decoration: none;
+                &:hover { text-decoration: underline; } } } }
+    header { position: relative;
         &:before {
             position: absolute;
-            left: -100px;
-            top: 0;
-            content: 'left banner';
-        }
+            left: -46px;
+            top: 20px;
+            width: 46px;
+            background: $primary;
+            height: 52px;
+            content: url(img/banner-left.png); }
         &:after {
             position: absolute;
-            right: -100px;
-            top: 0;
-            content: 'right banner';
-        }
-        background: #5d8ea2 url(img/header-bg.png) repeat-x;
+            right: -46px;
+            top: 20px;
+            width: 46px;
+            background: $primary;
+            height: 52px;
+            content: url(img/banner-right.png);}
+        background: $primary url(img/header-bg.png) repeat-x;
         height: 51px;
-        h1 {
-        }
-        h2 {
-        }
-    }
-}
+        font: normal normal 25px/50px 'Dancing Script';
+        text-align: center;
+        color: white;
+        @include letterpress($secondary, 0, -1px); } }
+.section-footer {
+    @include clearfix;
+    background: url(img/content-footer.png);
+    z-index: 5;
+    height: 18px;
+    width: 792px;
+    display: block;
+    margin-top: -8px; }
 
 /* Footer Rules
 ---------------------------------------- */
@@ -127,25 +201,91 @@ footer {
         background: white;
         float: left;
         margin-right: 30px;
-        #footer-left-container {
-            padding: 20px;
-        }
-    }
+        margin-bottom: 30px;
+        #footer-left-container { padding: 20px;
+            p {
+                font: normal normal 16px/24px 'Georgia';
+                color: $primary;
+                &.first-row {
+                    margin-bottom: 10px;
+                    margin-top:5px; } } } }
     #footer-right {
         float: left;
         width: 520px;
+        #footer-right-left {
+            width: 250px;
+            float: left; }
         #footer-right-container {
             background: white;
             padding: 20px;
-        }
-        #footer-right-footer {
-            background: transparent;
-        }
-    }
-}
+            #tweet-blurb {
+                margin-left: 260px;
+                background: url(img/h2-vert.png) repeat-y left top;
+                padding: 0 0 0 25px;
+                height: 117px !important;
+                font: normal normal 11px/22px 'Arial';
+                span { color: $primary; } }
+            #contact-blurb {
+                background: url(img/chat-icon.png) no-repeat left center;
+                padding: 0 0 0 70px;
+                font: normal normal 16px/24px 'Georgia';
+                color: $primary; }
+            .social {
+                height: 16px;
+                width: 16px;
+                overflow: hidden;
+                text-indent: -99999px;
+                font-size: 0;
+                display: inline-block;
+                margin-bottom: 15px;
+                &#facebook { background: url(img/facebook.png) no-repeat !important; }
+                &#twitter { background: url(img/twitter.png) no-repeat !important; }
+                &#flickr { background: url(img/flickr.png) no-repeat !important; } } }
+        #footer-right-footer { background: transparent;
+            .small-logo {
+                background: url(img/small-logo.png) no-repeat;
+                width: 110px;
+                height: 28px;
+                display: inline-block;
+                margin-top: 15px;
+                overflow: hidden;
+                text-index: -9999px;
+                font-size: 0; }
+            p {
+                margin-top: 15px;
+                float: right;
+                text-align: right;
+                font: 11px/16px 'Arial';
+                color: #AAA;
+                a {
+                    color: #CCC;
+                    text-decoration: none;
+                    &:hover { text-decoration: underline; } } } } } }
 
+/* Misc
+---------------------------------------- */
 
-
+.content-left {
+    background: red;
+    float: left;
+    height: 200px;
+    width: 300px;
+    padding: 30px 0 0 0; }
+#slider {
+    position:relative;
+    width:318px; /* Change this to your images width */
+    height:206px; /* Change this to your images height */
+    /*background:url(images/loading.gif) no-repeat 50% 50%;*/
+    overflow: hidden;
+    a {
+        border:0;
+        display:block; }
+    img {
+        position:absolute;
+        top:0px;
+        width: 108px;
+        left:0px;
+        display:none; } }
 
 /*
     Media Queries

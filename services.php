@@ -39,22 +39,63 @@
         <header id="main">
             <nav>
                 <ul>
-                    <li class="selected"><a href="/" id="home">Home</a></li>
-                    <li><a href="services.php" id="services">Services</a></li>
+                    <li><a href="/" id="home">Home</a></li>
+                    <li class="selected"><a href="services.php" id="services">Services</a></li>
                     <li><a href="about.php" id="about">About</a></li>
                     <li><a href="contact.php" id="contact">Contact</a></li>
                 </ul>
             </nav>
             <a href="/" id="logo">Metamorphosis Salon &amp; Spa</a>
         </header>
-        <style type="text/css" media="screen">
-            #home-content {
-                background: rgba(0,0,0,0.5);
-                width: 800px;
-                height: 350px;
-            }
-        </style>
-        <section id="home-content">
+        <section id="meta-inside">
+            <header>
+                <h1>Title of Section</h1>
+            </header>
+
+            <div class="content-left">
+                <div class="slider-wrapper theme-default">
+                    <div class="ribbon"></div>
+                    <div id="slider" class="nivoSlider">
+                        <img src="assets/css/img/toystory.jpg" alt="" />
+                        <img src="assets/css/img/up.jpg" alt="" title="" />
+                        <img src="assets/css/img/walle.jpg" alt="" />
+                        <img src="assets/css/img/nemo.jpg" alt="" title="" />
+                    </div>
+                </div>
+            </div>
+            <div class="content" style="padding-bottom: 40px;">
+                <h2>This is a subtitle, Blah blah blah.</h2>
+                <p>Nullam id dolor id <strong>nibh ultricies vehicula</strong> ut id elit. Lorem ipsum dolor sit amet,
+                    consectetur adipiscing elit. Donec sed odio dui. Vivamus sagittis lacus vel augue laoreet rutrum
+                    faucibus dolor auctor. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.</p>
+                <hr style="margin-top: 25px"/>
+            </div>
+            <div class="section-footer"></div>
+        </section>
+        <section id="meta-inside">
+            <header>
+                <h1>Title of Section</h1>
+            </header>
+            <div class="content">
+                <h2>This is a subtitle, Blah blah blah.</h2>
+                <p>Nullam id dolor id <strong>nibh ultricies vehicula</strong> ut id elit. Lorem ipsum dolor sit amet,
+                    consectetur adipiscing elit. Donec sed odio dui. Vivamus sagittis lacus vel augue laoreet rutrum
+                    faucibus dolor auctor. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.</p>
+
+                <p>Aenean lacinia bibendum nulla <a href="#">sed consectetur</a>. Nullam quis risus eget urna mollis
+                    ornare vel eu leo. Vestibulum id ligula porta felis euismod semper. Curabitur blandit tempus
+                    porttitor. Maecenas faucibus mollis interdum. Etiam porta sem malesuada magna mollis euismod.
+                    Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa
+                    justo sit amet risus.</p>
+
+                <p>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa
+                    justo sit amet risus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh,
+                    ut fermentum massa justo sit amet risus. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Curabitur blandit tempus porttitor. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Nulla vitae elit libero, a pharetra augue.</p>
+                <hr style="margin-top: 25px"/>
+            </div>
+            <div class="section-footer"></div>
         </section>
         <footer>
             <div id="footer-left">
