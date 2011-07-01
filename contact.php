@@ -36,30 +36,37 @@
     </head>
 
     <body>
-
         <header id="main">
             <nav>
                 <ul>
-                    <li class="selected"><a href="/" id="home">Home</a></li>
+                    <li><a href="/" id="home">Home</a></li>
                     <li><a href="services.php" id="services">Services</a></li>
                     <li><a href="about.php" id="about">About</a></li>
-                    <li><a href="contact.php" id="contact">Contact</a></li>
+                    <li class="selected"><a href="contact.php" id="contact">Contact</a></li>
                 </ul>
             </nav>
             <a href="/" id="logo">Metamorphosis Salon &amp; Spa</a>
         </header>
+        <section id="meta-inside">
+            <header>
+                <h1>Contact us</h1>
+            </header>
 
-        <section id="home-content">
-            <div id="home-slider-wrapper" class="slider-wrapper theme-default">
-                <div id="home-slider" class="nivoSlider">
-                    <img src="assets/img/home-1.png" />
-                    <img src="assets/img/home-2.png" />
-                    <img src="assets/img/home-3.png" />
-                </div>
+            <div class="content" style="padding-bottom: 40px;">
+                <h2 class="about-title" style="margin-top:-18px">Send us an email</h2>
+                <hr />
+                <form id="contact-form" name="contact-form" method="get" action="">
+                    <input type="text" id="name" name="name" value="Name" />
+                    <input type="text" id="email" name="email" value="Email" />
+                    <textarea id="message" name="message">Message</textarea>
+                </form>
+                <a href="#" id="form_btn" class="button" style="margin-top:15px">Submit</a>
             </div>
+            <div class="section-footer"></div>
+
         </section>
 
-        <? include('includes/_footer.php'); ?>
+        <?= include('includes/_footer.php') ?>
 
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
         <script>
@@ -69,8 +76,9 @@
                 )
             )
         </script>
+        <script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.8.1/jquery.validate.min.js"></script>
         <script type="text/javascript" src="assets/js/libs/jquery.nivo.slider.pack.js"></script>
-        <script src="assets/js/script.js"></script>
+        <script type="text/javascript" src="assets/js/script.js"></script>
         <!--[if lt IE7]>
             <script src="assets/js/libs/dd_belated.js"></script>
             <script>DD_belatedPNG.fix('img, .png_bg');</script>

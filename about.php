@@ -40,23 +40,44 @@
         <header id="main">
             <nav>
                 <ul>
-                    <li class="selected"><a href="/" id="home">Home</a></li>
+                    <li><a href="/" id="home">Home</a></li>
                     <li><a href="services.php" id="services">Services</a></li>
-                    <li><a href="about.php" id="about">About</a></li>
+                    <li class="selected"><a href="about.php" id="about">About</a></li>
                     <li><a href="contact.php" id="contact">Contact</a></li>
                 </ul>
             </nav>
             <a href="/" id="logo">Metamorphosis Salon &amp; Spa</a>
         </header>
 
-        <section id="home-content">
-            <div id="home-slider-wrapper" class="slider-wrapper theme-default">
-                <div id="home-slider" class="nivoSlider">
-                    <img src="assets/img/home-1.png" />
-                    <img src="assets/img/home-2.png" />
-                    <img src="assets/img/home-3.png" />
+        <section id="meta-inside">
+            <header>
+                <h1>About The Spa</h1>
+            </header>
+            <div class="content-left">
+                <div class="slider-wrapper theme-default">
+                    <div class="ribbon"></div>
+                    <div id="slider" class="nivoSlider">
+                        <img src="assets/img/about-3.png" alt="" />
+                        <img src="assets/img/about-4.png" alt="" />
+                        <img src="assets/img/about-2.png" alt="" />
+                        <img src="assets/img/about-5.png" alt="" />
+                        <img src="assets/img/about-6.png" alt="" />
+                    </div>
                 </div>
             </div>
+            <div class="content" style="padding-bottom: 40px;">
+                <h2 class="about-title">
+                    <span>[met<em>•</em>a<em>•</em>mor<em>•</em>pho<em>•</em>sis]</span> a
+                    <strong>profound</strong> change from within</h2>
+                <p><strong>Metamorphosis Salon and Day Spa</strong> is located in the heart of eclectic Lawrenceville.
+                    We believe that our Spa has captured the essence of the evolving neighborhood.
+                    In our family owned and operated business, we will be feature organic products
+                    and plan to offer innovative and unique services that will leave you with a lasting
+                    impression of our salon and day spa.</p>
+                    <a class="button" href="/contact.php"
+                    style="margin-top: 25px; margin-bottom:-15px">Contact us to schedule an appointment</a>
+            </div>
+            <div class="section-footer"></div>
         </section>
 
         <? include('includes/_footer.php'); ?>
