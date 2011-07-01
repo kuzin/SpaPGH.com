@@ -95,6 +95,7 @@
                     </li>
                     <li>
                         Highlights
+                        <p></p>
                         <p>Face Frame <strong>$30—$50</strong></p>
                         <p>Half Head <strong>$60—$85</strong></p>
                         <p>Full Head <strong>$90 &amp; up</strong></p>
@@ -259,6 +260,7 @@
                     </li>
                     <li>
                         Swedish Massage
+                        <p></p>
                         <p>60 minute <strong>$70</strong></p>
                         <p>90 minute <strong>$100</strong></p>
                     </li>
@@ -333,53 +335,57 @@
                 </ul>
                 <ul class="product-pricing">
                     <li>
-                        Cellulite Treatment <strong>$75</strong> <p><em>($15 off if added to a massage)</em></p>
+                        Cellulite Treatment <strong>$75</strong>
+                        <p>
+                            <em>As we sweat in the Steamy Wonder™, the skin pores begin to open and built-up
+                            sebum and impurities move out. Dead skin cells are softened and exfoliated as
+                            new softer skin can emerge. Effective cellulite reduction can be achieved by increasing circulation,
+                            stimulating metabolism, detoxifying and eliminating excess fluids. The Steamy
+                            Wonder™ used in conjunction with detoxifying mud and essential oils and/or manual
+                            manipulation of the tissues accelerate effective cellulite reduction.</em>
+                        </p>
+                        <p><em>($15 off if added to a massage)</em></p>
                     </li>
                 </ul>
-                <p>
-                    As we sweat in the Steamy Wonder™, the skin pores begin to open and built-up
-                    sebum and impurities move out. Dead skin cells are softened and exfoliated as
-                    new softer skin can emerge. </p>
-                <p>Effective cellulite reduction can be achieved by increasing circulation,
-                    stimulating metabolism, detoxifying and eliminating excess fluids. The Steamy
-                    Wonder™ used in conjunction with detoxifying mud and essential oils and/or manual
-                    manipulation of the tissues accelerate effective cellulite reduction.
-                </p>
+
                 <ul class="product-pricing">
                     <li>
                         Detox
+                        <p><em>There are a wide variety of toxins in our bodies, including herbicides, pesticides,
+                            food additives, air pollution, and household chemicals. When ingested, these chemicals
+                            can remain in the body for years, altering our metabolism, causing enzyme dysfunction
+                            and nutritional deficiencies, creating hormonal imbalances and lowering our threshold
+                            of resistance to chronic disease. Today, studies show that most of us have between 400
+                            and 800 chemical residues stored in the fat cells of our bodies. When our bodies exceed
+                            the limit that we can excrete, we begin to store these toxins. The Maximum Purification
+                            and Detox Treatment along with Steamy Wonder Portable Steam Sauna provide the ultimate
+                            detoxification.</em>
+                        </p>
                         <p>One session <strong>$120</strong></p><p>3 day session <strong>$300</strong></p>
                         <p><em>We recommend that this treatment be done 3 days in a row 4 times a year.
                             This treatment includes a 30 minute lymphatic drainage massage to assist
                             and speed up detoxification.</em></p>
                     </li>
                 </ul>
-                <p>There are a wide variety of toxins in our bodies, including herbicides, pesticides,
-                    food additives, air pollution, and household chemicals. When ingested, these chemicals
-                    can remain in the body for years, altering our metabolism, causing enzyme dysfunction
-                    and nutritional deficiencies, creating hormonal imbalances and lowering our threshold
-                    of resistance to chronic disease. Today, studies show that most of us have between 400
-                    and 800 chemical residues stored in the fat cells of our bodies. When our bodies exceed
-                    the limit that we can excrete, we begin to store these toxins. The Maximum Purification
-                    and Detox Treatment along with Steamy Wonder Portable Steam Sauna provide the ultimate
-                    detoxification.
-                </p>
+
                 <ul class="product-pricing">
                     <li>
-                        Stress Reliever <strong>$75</strong> <p><em>$15 off if added to a massage</em></p>
+                        Stress Reliever <strong>$75</strong>
+                        <p>
+                            <em>An artificial fever induced by Steamy Wonder™ treatments can also help with mood
+                            elevation. A study conducted by H.I. Robins at the University of Wisconsin found
+                            that "mood states of cancer patients following whole-body hyperthermia show a
+                            significant improvement in depression. This was attributed to the increased
+                            B-endorphins, the same endorphins released with exercise.</em>
+                        </p>
+                        <p><em>$15 off if added to a massage</em></p>
                     </li>
                 </ul>
-                <p>
-                    An artificial fever induced by Steamy Wonder™ treatments can also help with mood
-                    elevation. A study conducted by H.I. Robins at the University of Wisconsin found
-                    that "mood states of cancer patients following whole-body hyperthermia show a
-                    significant improvement in depression. This was attributed to the increased
-                    B-endorphins, the same endorphins released with exercise.
-                </p>
+
                 <hr style="margin-top: 25px"/>
                 <h2 id="facial">Facials</h2>
-                <p>All of our facials are done using Eminence products which are organic
-                    products hand-made in Hungary.
+                <p><em>All of our facials are done using Eminence products which are organic
+                    products hand-made in Hungary.</em>
                 </p>
                 <ul class="product-pricing">
                     <li>
@@ -497,6 +503,7 @@
             )
         </script>
         <script type="text/javascript" src="assets/js/libs/jquery.nivo.slider.pack.js"></script>
+        <script type="text/javascript" src="assets/js/libs/jquery.sticky.js"></script>
         <script src="assets/js/script.js"></script>
         <!--[if lt IE7]>
             <script src="assets/js/libs/dd_belated.js"></script>

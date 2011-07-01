@@ -642,10 +642,7 @@ ul.product-pricing {
 #slider {
   position: relative;
   width: 318px;
-  /* Change this to your images width */
   height: 206px;
-  /* Change this to your images height */
-  /*background:url(images/loading.gif) no-repeat 50% 50%;*/
   overflow: hidden; }
   #slider a {
     border: 0;
@@ -742,6 +739,21 @@ h2 strong {
 h2.about-title {
   font-family: Georgia !important;
   font-size: 20px !important; }
+
+h3 {
+  margin-bottom: 15px;
+  margin-top: 15px !important;
+  font-size: 15px;
+  line-height: 22px; }
+
+section#meta-inside div.content p {
+  margin-top: 0px;
+  margin-bottom: 15px;
+  line-height: 23px; }
+
+ul.product-pricing li p:nth-child(2) {
+  border-top: 1px solid #ccc !important;
+  padding-top: 10px; }
 
 /*
     Media Queries
