@@ -17,8 +17,11 @@
             Metamorphosis Salon &amp; Spa » Home
         </title>
 
-        <meta name="description" content="">
-        <meta name="keywords" content="">
+        <meta name="description" content="Metamorphosis Salon and Day Spa features an impressive lineup of organic
+            products and provides innovative and unique services for your health and beauty, located in Lawrenceville, PA.">
+        <meta name="keywords" content="pittsburgh spa, spa pittsburgh, salon pittsburgh, salon, hair, manicure, spa,
+            pittsburgh salon, lawrenceville salon, lawrenceville spa, haircut, color, haircolor, waxing, nail services,
+            pedicure, body treatments, facials">
 
         <meta name="author" content="humans.txt">
 
@@ -40,7 +43,7 @@
         <header id="main">
             <nav>
                 <ul>
-                    <li class="selected"><a href="/" id="home">Home</a></li>
+                    <li class="selected"><a href="index.php" id="home">Home</a></li>
                     <li><a href="services.php" id="services">Services</a></li>
                     <li><a href="about.php" id="about">About</a></li>
                     <li><a href="contact.php" id="contact">Contact</a></li>
