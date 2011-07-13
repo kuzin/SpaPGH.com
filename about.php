@@ -68,7 +68,7 @@
                     </div>
                 </div>
             </div>
-            <div class="content" style="padding-bottom: 40px;">
+            <div class="content" style="padding-bottom: 40px;padding-left:420px">
                 <h2 class="about-title">
                     <span>[met<em>•</em>a<em>•</em>mor<em>•</em>pho<em>•</em>sis]</span> a
                     <strong>profound</strong> change from within</h2>
