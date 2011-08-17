@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* MikeKuzin.com Initial Development
    Version 2.0 Beta
 ---------------------------------------- */
@@ -254,8 +255,22 @@ hr {
 .clearfix {
   clear: both; }
 
+/* IE6
+---------------------------------------- */
+body.ie6 a#logo {
+  position: relative;
+  behavior: expression((this.runtimeStyle.behavior="none")&&(this.pngSet?this.pngSet=true:(this.nodeName == "IMG" && this.src.toLowerCase().indexOf('.png')>-1?(this.runtimeStyle.backgroundImage = "none", this.runtimeStyle.filter = "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='" + this.src + "',sizingMethod='image')",this.src = "http://sc-img.s3.amazonaws.com/clear.gif"):(this.origBg = this.origBg? this.origBg :this.currentStyle.backgroundImage.toString().replace('url("','').replace('")',''), this.runtimeStyle.filter = "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='" + this.origBg + "',sizingMethod='crop')",this.runtimeStyle.backgroundImage = "none")), this.pngSet=true) ); }
+
 /* Buttons
 ---------------------------------------- */
+.button:after,
+.button:before,
+input.button-input:before,
+input.button-input:after {
+  content: '' !important;
+  background: none !important;
+  display: none !important; }
+
 a#logo {
   background: url(img/logo_colors.png) no-repeat;
   width: 449px;
@@ -337,7 +352,8 @@ header#main {
   header#main nav ul {
     float: right; }
     header#main nav ul li {
-      display: inline-block; }
+      display: inline-block;
+      float: right; }
       header#main nav ul li.selected a {
         background: url(img/nav-bg.png) repeat;
         color: #5d8ea2;
@@ -758,9 +774,6 @@ ul.product-pricing li p:nth-child(2) {
 /*
     Media Queries
 */
-@media all and (orientation:portrait) {}
-@media all and (orientation:landscape) {}
-@media screen and (max-device-width: 480px) {}
 /*
     Inline Print
 */

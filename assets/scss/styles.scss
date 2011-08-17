@@ -52,8 +52,29 @@ hr {
     border: none !important; }
 .clearfix { clear:both; }
 
+/* IE6
+---------------------------------------- */
+
+body.ie6 a#logo { position: relative;behavior: expression((this.runtimeStyle.behavior="none")&&(this.pngSet?this.pngSet=true:(this.nodeName == "IMG"
+&& this.src.toLowerCase().indexOf('.png')>-1?(this.runtimeStyle.backgroundImage = "none",
+this.runtimeStyle.filter = "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='" + this.src
++ "',sizingMethod='image')",this.src = "http://sc-img.s3.amazonaws.com/clear.gif"):(this.origBg = this.origBg?
+this.origBg :this.currentStyle.backgroundImage.toString().replace('url("','').replace('")',''),
+this.runtimeStyle.filter = "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='" +
+this.origBg + "',sizingMethod='crop')",this.runtimeStyle.backgroundImage = "none")),
+this.pngSet=true)
+);}
+
 /* Buttons
 ---------------------------------------- */
+.button:after,
+.button:before,
+input.button-input:before,
+input.button-input:after {
+    content: '' !important;
+    background: none !important;
+    display: none !important;
+}
 
 a#logo {
     background: url(img/logo_colors.png) no-repeat;
@@ -127,6 +148,7 @@ header#main {
         ul { float: right;
             li {
                 display: inline-block;
+                float: right;
                 &.selected {
                     a {
                         background: url(img/nav-bg.png) repeat;

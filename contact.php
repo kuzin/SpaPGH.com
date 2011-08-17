@@ -6,9 +6,7 @@
 ?>
 
 <!DOCTYPE html>
-<!--[if IE 7 ]>    <html class="ie7" lang="en"> <![endif]-->
-<!--[if IE 8 ]>    <html class="ie8" lang="en"> <![endif]-->
-<!--[if (gte IE 9)|!(IE)]><!--> <html lang="en"> <!--<![endif]-->
+<html lang="en">
     <head>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -38,7 +36,10 @@
 
     </head>
 
-    <body>
+    <!--[if IE 6]>       <body class="ie6 ie">    <![endif]-->
+    <!--[if IE 7]>      <body class="ie7 ie">    <![endif]-->
+    <!--[if lte IE 8]>  <body class="ie8 ie">    <![endif]-->
+    <!--[if (gte IE 9)|!(IE)]><!--> <body onunload=""> <!--<![endif]-->
         <header id="main">
             <nav>
                 <ul>
@@ -82,10 +83,6 @@
         <script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.8.1/jquery.validate.min.js"></script>
         <script type="text/javascript" src="assets/js/libs/jquery.nivo.slider.pack.js"></script>
         <script type="text/javascript" src="assets/js/script.js"></script>
-        <!--[if lt IE7]>
-            <script src="assets/js/libs/dd_belated.js"></script>
-            <script>DD_belatedPNG.fix('img, .png_bg');</script>
-        <![endif]-->
         <script>
             var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']]; // Change UA-XXXXX-X to be your site's ID
     		(function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];g.async=1;
